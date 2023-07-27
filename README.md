@@ -13,7 +13,7 @@ Where each line represents a JSON object for each of the clue/answer in the cros
 - How would you automate your deployments so that each push to your default branch will trigger a deployment to your production environment
 - > We would use the ci/cd if we have a runner. If not, we can use the webhooks.
 - Is it possible to get the data about past crosswords? If yes, how would you build a solution to get all the historical crosswords data?
-- > Use the build in restful api. See the bottom documentation
+- > Use the build-in restful api. See the bottom documentation
 
 ## Run Locally
 
@@ -90,7 +90,7 @@ http://127.0.0.1:8000/storage/crosswords.json
 Use the restful API to manage the crosswords
 
 ```http request
-### Get crosswords
+### Get crosswords. It defaults to the current day.
 GET http://127.0.0.1:8000/api/crossword
 Accept: application/json
 
