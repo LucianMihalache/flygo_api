@@ -1,0 +1,32 @@
+### Get crosswords
+GET http://127.0.0.1:8000/api/crossword
+Accept: application/json
+
+### Get crosswords for date
+GET http://127.0.0.1:8000/api/crossword?date=2023-07-28
+Accept: application/json
+
+### Create crossword
+POST http://127.0.0.1:8000/api/crossword
+Content-Type: application/json
+Accept: application/json
+
+{
+    "answer": "Lorem",
+    "clue": "Ipsum?",
+    "date": "2023-07-27",
+    "direction": "across"
+}
+
+### Update crossword
+PUT http://127.0.0.1:8000/api/crossword/5
+Content-Type: application/json
+Accept: application/json
+
+{
+    "date": "2023-07-29"
+}
+
+### Delete crossword
+DELETE http://127.0.0.1:8000/api/crossword/2
+Content-Type: application/json
