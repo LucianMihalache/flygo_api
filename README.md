@@ -1,3 +1,20 @@
+### TODO:
+
+Every day the New York Times publish a mini crossword available at this page https://www.nytimes.com/crosswords/game/mini
+
+Build a production ready utility that, given a date, generates an output similar to the following one:
+
+Where each line represents a JSON object for each of the clue/answer in the crossword for that day with the following fields:
+
+- Which infrastructure resources you would need to run the utility daily in an automated fashion?
+- > To automatically generate the daily crosswords we need to use the crons, for this we need to add: <pre>* * * * * cd /path/to/flygo_api && php artisan schedule:run >> /dev/null 2>&1</pre>
+- How would you deploy your code to the infrastructure?
+- > We would preferably use ci/cd with a runner to build and deploy the app
+- How would you automate your deployments so that each push to your default branch will trigger a deployment to your production environment
+- > We would use the ci/cd if we have a runner. If not, we can use the webhooks.
+- Is it possible to get the data about past crosswords? If yes, how would you build a solution to get all the historical crosswords data?
+- > Use the build in restful api. See the bottom documentation
+
 ## Run Locally
 
 Clone the project
